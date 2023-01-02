@@ -1,0 +1,195 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "REST API",
+    "description": ""
+  },
+  "host": "localhost:3333",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/user/": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Dados do usuario que deseja cadastrar.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "nome": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "cpf": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "bairro": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "cep": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "cidade": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "complemento": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "rua": {
+                  "type": "string",
+                  "example": "string"
+                }
+              },
+              "required": [
+                "nome",
+                "cpf",
+                "bairro",
+                "cep",
+                "cidade",
+                "complemento",
+                "rua"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/{id}": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Dados do usuario que deseja cadastrar.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "nome": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "cpf": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "bairro": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "cep": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "cidade": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "complemento": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "rua": {
+                  "type": "string",
+                  "example": "string"
+                }
+              },
+              "required": [
+                "nome",
+                "cpf",
+                "bairro",
+                "cep",
+                "cidade",
+                "complemento",
+                "rua"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
